@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fb</title>
+	 <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" type="text/css">
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="img/favicon%20(1).ico">
+    <!-- animate css link -->
+    <link rel="stylesheet" href="css/animate/animate.css" type="text/css">
+    <!-- css file link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+ <nav class="navbar fb-nav navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="own-nav-wrapper">
+                <div class="navbar-header">
+                    <button role="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#own-menu">
+                <span class="sr-only">toggle navigation</span>
+                    <span class="icon-bar"></span>
+                     <span class="icon-bar">
+                    </span>
+                     <span class="icon-bar">
+                    </span></button>
+                    <a class="navbar-brand nav-style" href="#home">facebook</a>
+
+                </div>
+                <div class="collapse navbar-collapse" id="own-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="right-side-button home-btn" href="#home">Home</a></li>
+                        <li><a class="right-side-button feed" href="#feed">FEED</a></li>
+
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </nav>
+    <!-- form for token -->
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-12">
+    <div class="form-group">
+    <div class="input-group" style="margin-top:60px ">
+    <input type="text" class="form-control" id="fbToken" placeholder="Enter fb api token here....">
+    <span class="input-group-btn">
+    <button id="input" class="btn btn-primary" type="button">Go</button>	
+
+    </span>
+
+
+    </div>	
+    </div>
+
+    </div>	
+
+    </div>
+
+    </div>
+    <!--- loader div-->
+    <div class="loader">Loading...</div>
+    <!-- section tag for whole fb info-->
+    <section id="fb-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-12">
+    <img class="img-responsive center-block profilePhoto img-height" style="margin: 0 auto">
+    <span id="welcome"></span>
+    </div>
+    <!--basic info panel-->
+    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <h3 class="panel-title">Basic info</h3>	
+    </div>
+    <div class="panel-body">
+    <p style="display:inline;">First-Name:</p><span id="firstName"></span>
+    </div>
+    <div class="panel-body">
+    <p style="display:inline;">Last-Name:</p><span id="lastName"></span>
+    </div>
+    <div class="panel-body">
+    <p style="display:inline" style="overflow:hidden">Email</p>
+    :<span id="myEmail" style="font-size:0.8rem"></span>
+   	</div>
+    </div>	
+
+
+    </div>
+    <!--Family Members and Relatonship-->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <h3 class="panel-title">Family Members and relationship</h3></div>
+    <div class="panel-body">
+    <p style="display:inline;">Family-members:</p><span id="family"></span>	
+    </div>
+    <div class="panel-body">
+    <p style="display:inline">relationship-status</p>:<span id="relStatus"></span>
+    </div>
+    <div class="panel-body">
+    <p style="display:inline">Gender</p>:<span id="gender"></span>
+    </div>                    
+    </div>	
+	</div>
+	<!-- work and education div    -->
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="cover wow bounceInRight">
+                        <h4>Cover</h4>
+                        <br>
+                        <img class="myCoverPic img-responsive" alt="cover pic goes here!">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="work wow bounceInLeft">
+                        <h4>Work and Education</h4>
+                        <br />
+                        <p>Work : <span id="myWork"></span></p>
+                        <p>Education : <span id="myEducation"></span></p>
+                    </div>
+
+
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed1 animated fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory1"></a>
+                        <a class="photoDisplay1"></a>
+                    </div>
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed2 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory2"></a>
+                        <a class="photoDisplay2"></a>
+                    </div>
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory3"></a>
+                        <a class="photoDisplay3"></a>
+                    </div>
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory4"></a>
+                        <a class="photoDisplay4"></a>
+                    </div>
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed5 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory5"></a>
+                        <a class="photoDisplay5"></a>
+                    </div>
+                </div>
+                <!-- feed 1  -->
+                <div class="col-lg-12 col-lg-offset-3 col-md-offset-3 col-md-12 col-sm-12">
+                    <div class="feed6 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a id="postStory6"></a>
+                        <a class="photoDisplay6"></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end row -->
+
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end fb cover -->
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- on scroll animation js file -->
+    <script src="js/wow/wow.min.js"></script>
+    <!-- custom jquery file linking -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- bootstrap js file linking -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+
+</body>
+
+
+
+
+</html>
